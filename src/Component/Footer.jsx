@@ -1,0 +1,37 @@
+
+const Footer = () => {
+  return (
+    <>
+        <footer className="flex mt-20 gap-5 text-White lg:flex-row flex-col bg-Black p-10 lg:p-20 justify-between">
+            <div>
+                <h1 className="font-semibold text-xl pb-2">Gee-Store</h1>
+                <p>Subscribe</p>
+                <div className=" flex items-center justify-between my-4 pl-2 border-2 border-White ">
+                    <input className="bg-Black outline-none" type="text" placeholder="Enter your email" />
+                    <button className="bg-Pink p-2 font-semibold">Send</button>
+                </div>
+            </div>
+            <div>
+                <h1 className="font-semibold text-xl pb-2">Support</h1>
+                <p>Shop 18, shoping Mall, Effuren</p>
+                <p className="py-2">geestore@gmail.com</p>
+                <p>+2348146547298</p>
+            </div>
+            <div>
+                <h1 className="font-semibold text-xl pb-2">Account</h1>
+                <p>Login / Register</p>
+                <p className="py-2">Cart</p>
+                <p>Shop</p>
+            </div>
+            <div>
+                <h1 className="font-semibold text-xl pb-2">Quick Link</h1>
+                <p>Privacy Policy</p>
+                <p className="py-2">FAQ</p>
+                <p>Contact</p>
+            </div>
+        </footer>
+    </>
+  )
+}
+
+export default Footer
