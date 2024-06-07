@@ -6,7 +6,9 @@ import Data from '../Component/Data'
 import { useContext } from 'react'
 import { AppContext } from '../App'
 import Footer from './Footer'
-import Admin from './Admin'
+// import Admin from './Admin'
+import {signOut} from "firebase/auth"
+import { auth } from "../config/firebase"
 
 const HomePage = () => {
 //   const [product, setProduct] = useState([])
@@ -35,6 +37,7 @@ const HomePage = () => {
       <Header/>
       <Hero/>
       <Category/>
+      <button className='h-2 w-10 bg-Pink' onClick={()=>signOut(auth)}>Logout</button>
       <div className='grid grid-cols-1 lg:grid-cols-4  gap-5 px-10 lg:px-40'>
       {
         Data.slice(0, 4).map((Products)=>{

@@ -1,7 +1,8 @@
 import { db, storage } from '../config/firebase'
 import { useEffect, useState } from 'react'
+import { updateProfile } from 'firebase/auth'
 import { getDocs, collection, addDoc, orderBy, query } from 'firebase/firestore'
-import { ref, uploadBytes } from "firebase/storage"
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 import Header from './Header'
 import Footer from './Footer'
 import { v4 } from 'uuid'
@@ -28,18 +29,11 @@ const Admin = () => {
     };
     getProduct();
   }, []);
-  const uploadImage = () => {
-    if (image == null) return;
-    const imageRef = ref(storage, `images/${image.name + v4()}`)
-    uploadBytes(imageRef, image).then(()=>{
-      alert("Image Upload")
-    })
-  }
   const onSubmit = async (e) => {
     e.preventDefault()
-    uploadImage()
     await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice, Category: newCategory })
-}
+  }
+  
   
     return (
       <>
@@ -61,13 +55,13 @@ const Admin = () => {
               </div>
               <div className='grid gap-3'>  
                 <label className='font-semibold pt-5'>Product Price <span className='text-Pink'>*</span></label>
-                <input className='lg:w-[500px] outline-none font-semibold text-xl border-Grey pl-3 h-14 rounded border' placeholder="Product Price" type="text" onChange={(e) => setNewTitle(e.target.value)} />
+                <input className='lg:w-[500px] outline-none font-semibold text-xl border-Grey pl-3 h-14 rounded border' placeholder="Product Price" type="text" onChange={(e) => setNewPrice(e.target.value)} />
               </div>
               <div className='grid gap-3'>
                 <label className='font-semibold pt-5'>Product Category <span className='text-Pink'>*</span></label>
                 <input className='lg:w-[500px] outline-none font-semibold text-xl border-Grey pl-3 h-14 rounded border' placeholder="Product Category" type="text" onChange={(e) => setNewCategory(e.target.value)} />
               </div>
-              <div className='grid gap-3'>
+              <div className='grid pt-5 gap-3'>
                 <input className='' type="file" onChange={(e) => {setImage(e.target.files[0])}} />
               </div>
             </div>
@@ -76,6 +70,6 @@ const Admin = () => {
       <Footer/>
       </>
     )
-}
+};
 
 export default Admin

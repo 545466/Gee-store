@@ -8,15 +8,16 @@ import Shoe from "./Component/Categories/Shoe.jsx";
 import Sport from "./Component/Categories/Sport.jsx";
 import Fragrance from "./Component/Categories/Fragrance.jsx";
 import Accessories from "./Component/Categories/Accessories.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Phone from "./Component/Categories/Phone.jsx";
 import ProductDetail from "./Component/Categories/ProductDetail.jsx";
 // import { ShopContextProvider } from "./Component/Categories/ShopContext.jsx";
-import { createContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import Data from './Component/Data.js'
 import Cart from "./Component/Cart.jsx";
 import Contact from "./Component/Contact.jsx";
 import Admin from "./Component/Admin.jsx";
+import { AuthContext } from "./Component/Context/AuthContext.jsx";
 
 export const AppContext = createContext(null);
 
@@ -37,10 +38,18 @@ function App() {
       setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1 }))
     }
   // const contextValue = 
+  const { currentUser } = useContext(AuthContext);
+  const ProtectedRoute = ({ children }) =>{
+    if(!currentUser){
+      return <Navigate to="/Login"/>
+    }
+    
+    return children
+  };
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
+      element: <ProtectedRoute> <HomePage /> </ProtectedRoute> ,
     },{
       path: "/Admin",
       element: <Admin />,
