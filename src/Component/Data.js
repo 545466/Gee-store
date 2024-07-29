@@ -1,33 +1,34 @@
 const Data = [
   {
     id: 1,
-    Title: "Kojo silk shirt",
+    Title: "English wear",
     Category: "Fashion",
     Price: "₦5,000.00",
     Image:
-      "https://the5kshop.com/wp-content/uploads/2023/01/C0A8D76A-C149-41D6-ABBE-620D9473BAEC.jpeg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692733670%2FJD%2Fusers%2F64e506dd1d49b0553146c420%2Fproduct%2FProducts_2F874DE3DF-0C02-49EE-ABD8-23017C62D4BF.png&w=1080&q=75",
   },
   {
     id: 2,
-    Title: "Vina shirt",
+    Title: "Ankara",
     Category: "Fashion",
-    Price: "₦5,000.00",
-    Image: "https://the5kshop.com/wp-content/uploads/2022/08/IMG_3219.jpg",
+    Price: "₦15,450.00",
+    Image:
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1714643539%2FJD%2Fusers%2F66335cec47487ac75e6c5232%2Fproduct%2FProducts_2FIMG-20240502-WA0148.jpg&w=1080&q=75",
   },
   {
     id: 3,
-    Title: "Black Nike Bag",
+    Title: "Classy bag",
     Category: "Bag",
     Price: "₦9,300.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/03/bag-600x600.png",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1691856520%2FJD%2Fusers%2F64d7a9e12f5f553562e78809%2Fproduct%2FProducts_2FIMG-20230812-WA0201.jpg&w=1080&q=75",
   },
   {
     id: 4,
-    Title: "Valentino Shoes",
+    Title: "Stripe Sneakers",
     Category: "Shoes",
     Price: "₦61,800.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/06/c4ca65c9-b13c-47c0-b9e0-ae78949e8f1e.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1707516717%2FJD%2Fusers%2F64c393fc778e62425349e688%2Fproduct%2FProducts_2FIMG-20240205-WA0059.jpg&w=1080&q=75",
   },
   {
     id: 5,
@@ -38,88 +39,80 @@ const Data = [
   },
   {
     id: 6,
-    Title: "New Men’s European 14inch size",
+    Title: "Fully boxed Gucci bag",
     Category: "Bag",
     Price: "₦16,500.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/12/brown-bag.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690760680%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_6015.jpg&w=1080&q=75",
   },
   {
     id: 7,
-    Title: "Alexander McQueen Boots",
+    Title: "Versace",
     Category: "Shoes",
     Price: "₦139,050.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/06/be2ac41f-92ca-46b7-9d22-03d5eccedf6d.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692086961%2FJD%2Fusers%2F64db2d041d49b055313ee556%2Fproduct%2FProducts_2FIMG-20230714-WA0012.jpg&w=1080&q=75",
   },
   {
     id: 8,
-    Title: "Gym Master Professional Spinning Bike",
+    Title: "Treadmill",
     Category: "Sport",
     Price: "₦247,200.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2022/07/gym_master.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1718892898%2FJD%2Fusers%2F666e2c618068a0917f6e7883%2Fproduct%2FProducts_2Fe47566ee4dba4301a58f172f8ba47e4a.jpg&w=1080&q=75",
   },
   {
     id: 9,
-    Title: "New Apple iPhone 12 Pro Max (128GB) – Silver",
+    Title: "iPhone 11 65gb",
     Category: "Phones",
     Price: "₦566,500.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/08/iphone12promax-silver.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1710631143%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FIMG_2929.jpg&w=1080&q=75",
   },
   {
     id: 10,
-    Title: "Riggs Dynamo Body Spray",
+    Title: "Zara",
     Category: "Fragrance",
     Price: "₦1,650.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2022/04/riggs_img.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692981266%2FJD%2Fusers%2F64cfa5b8ba98adbd18acd18c%2Fproduct%2FProducts_2F1_20_10.jpg&w=1080&q=75",
   },
   {
     id: 11,
-    Title: "Men’s Hoodie – Grey",
+    Title: "Thick Luxury Shirt",
     Category: "Fashion",
     Price: "₦16,000.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2024/03/119736_1700748078.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1694199924%2FJD%2Fusers%2F64fb6bf52744e6ffdce676f2%2Fproduct%2FProducts_2F3715b46627c34f31978b441d6eab0a55.jpg&w=1080&q=75",
   },
   {
     id: 12,
-    Title: "Men’s Designer Tuxedo Jacket",
+    Title: "English wear",
     Category: "Fashion",
     Price: "₦33,500.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/12/c7c55d4ff0723e7c735ab77983ebf382.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692733670%2FJD%2Fusers%2F64e506dd1d49b0553146c420%2Fproduct%2FProducts_2F874DE3DF-0C02-49EE-ABD8-23017C62D4BF.png&w=1080&q=75",
   },
   {
     id: 13,
-    Title: "Full Body Massage Chair",
+    Title: "Ladies Corporate Shoe",
     Category: "Shoes",
     Price: "₦978,500.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/06/23291B89-D01F-4C3A-9AF5-8F2D9AF02BCC.jpeg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1706383627%2FJD%2Fusers%2F65b555b7a70634ceedc4944b%2Fproduct%2FProducts_2FIMG-20240127-WA0036.jpg&w=1080&q=75",
   },
   {
     id: 14,
-    Title: "Travis Scott x Air Jordan 6",
+    Title: "Men's Corporate Shoe",
     Category: "Shoes",
     Price: "₦40,200.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/06/Travis-Scott-x-Air-Jordan-6-2nd-picture-600x743.png",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1691781101%2FJD%2Fusers%2F64d684812f5f553562e5ec99%2Fproduct%2FProducts_2FIMG-20230811-WA0057.jpg&w=1080&q=75",
   },
   {
     id: 15,
-    Title: "Armaf Niche Bucephalus XI EDP 100ml",
+    Title: "Oil Perfume",
     Category: "Fragrance",
-    Price: "₦22,150.00",
+    Price: "₦6,000",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/05/Bucephelus_3_400x.png",
-  },
-  {
-    id: 16,
-    Title: "2 in 1 Quality Luxury Wristwatch For Couples Gold",
-    Category: "Accessories",
-    Price: "₦46,350.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2024/02/IMG-20240212-WA0139-300x300.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692212621%2FJD%2Fusers%2F64da5478b21a0845ef838a96%2Fproduct%2FProducts_2FScreenshot_20230629-092826.png&w=1080&q=75",
   },
   {
     id: 17,
@@ -130,248 +123,112 @@ const Data = [
       "https://lagmall.com.ng/wp-content/uploads/2021/06/0CA85C78-DDDF-4DF5-BCD1-BEBE28D9DE4C.jpeg",
   },
   {
-    id: 18,
-    Title: "Samsung Galaxy A21s 6.5″ 48MP Camera, 4/64GB Memory",
-    Category: "Accessories",
-    Price: "₦82,400.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/4-2-1.jpg",
-  },
-  {
     id: 19,
-    Title: "Fendi Female Hand Bag, Brown",
+    Title: "Denim Bag",
     Category: "Bag",
     Price: "₦10,300.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/01/ladies-bag-fendi-1.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690759768%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_5994.jpg&w=1080&q=75",
   },
   {
     id: 20,
-    Title: "Flowers Bloom Pocket-size Body Spray 35ml",
+    Title: "Tom Ford",
     Category: "Fragrance",
     Price: "₦1,550.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/05/bloom1.jpeg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1696668012%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_9217.jpg&w=1080&q=75",
   },
   {
     id: 21,
-    Title: "2 Piece Color Block Corduroy Shirt",
+    Title: "Clothes",
     Category: "Fashion",
     Price: "₦29,750.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/03/IMG-20230215-WA0014_1.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690976301%2FJD%2Fusers%2F64c6e3be35e1d1a62f4f892f%2Fproduct%2FProducts_2FIMG-20230801-WA0065.jpg&w=1080&q=75",
   },
   {
     id: 22,
-    Title: "2 in 1 Multicolor Shorts",
+    Title: "Unisex Sport boxer",
     Category: "Fashion",
     Price: "₦15,450.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2024/01/1-21.jpg",
-  },
-  {
-    id: 23,
-    Title: "A pair of Dumbbells 2kg, 3kg",
-    Category: "Sport",
-    Price: "₦6,200.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/05/7B3FE1C9-A110-4623-9A36-D4A9FAE114C4.jpeg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1714633697%2FJD%2Fusers%2F6633290f47487ac75e67feb7%2Fproduct%2FProducts_2F1.jpg&w=1080&q=75",
   },
   {
     id: 24,
-    Title: "Magic Keyboard for iPad Pro",
+    Title: "Samsung s9",
     Category: "Phones",
     Price: "₦190,550.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/MXQU2LL.jpeg",
-  },
-  {
-    id: 25,
-    Title: "Davidoff Cool Water Men’s Perfume",
-    Category: "Fragrance",
-    Price: "₦25,750.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/05/20200526_101337-600x766.jpg",
-  },
-  {
-    id: 26,
-    Title: "The Gucci Women Flat Sandals",
-    Category: "Shoes",
-    Price: "₦13,400.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/09/gucci_sandals_wo.jpg",
-  },
-  {
-    id: 27,
-    Title: "Frank Muller Geneve Quality wrist watch",
-    Category: "Accessories",
-    Price: "₦144,200.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/05/IMG-20210519-WA0002.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1710465029%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FIMG_2968.jpg&w=1080&q=75",
   },
   {
     id: 28,
-    Title: "APPLE IPAD PRO 2020 11″ 256GB- SPACE GRAY",
+    Title: "Infinx S5 Lite",
     Category: "Phones",
     Price: "₦499,550.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/10/ipad-pro-11-select-wifi-spacegray-202003.png",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692049841%2FJD%2Fusers%2F64c393fc778e62425349e688%2Fproduct%2FProducts_2FIMG-20230814-WA0370.jpg&w=1080&q=75",
   },
   {
     id: 29,
-    Title: "Multicolored pink Louis Vuitton bag",
+    Title: "Gucci Bag",
     Category: "Bag",
     Price: "₦12,400.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/07/Multicolored-pink-bag-e1595421628440-600x591.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690760058%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_5950.jpg&w=1080&q=75",
   },
   {
     id: 30,
-    Title: "3 Piece Vintage Beach Wear",
+    Title: "Long Sleeve Thrifts",
     Category: "Fashion",
     Price: "₦29,750.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/03/IMG-20230215-WA0005_1.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1701237200%2FJD%2Fusers%2F654e1791655675bfa5194ac4%2Fproduct%2FProducts_2F20231127_220411.jpg&w=1080&q=75",
   },
   {
     id: 31,
-    Title: "Samsung Galaxy A71- 8GB RAM 128GB ROM",
+    Title: "Google pixel 8",
     Category: "Phones",
     Price: "₦176,150.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/4-1.jpg",
-  },
-  {
-    id: 32,
-    Title: "Armaf Derby Club House EDT 100ml",
-    Category: "Fragrance",
-    Price: "₦13,000.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/06/Derby-Club-House-Blue-2_400x.png",
-  },
-  {
-    id: 33,
-    Title: "Aluminium Outdoor Table Tennis Table",
-    Category: "Sport",
-    Price: "₦226,600.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/04/indoor-table-tennis-table-MDF.jpeg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1699619167%2FJD%2Fusers%2F654e1791655675bfa5194ac4%2Fproduct%2FProducts_2FIMG-20231110-WA0017.jpg&w=1080&q=75",
   },
   {
     id: 34,
-    Title: "Men Shorts Light Grey",
+    Title: "T-Shirts",
     Category: "Fashion",
     Price: "₦10,300.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/07/grey-shorts-1.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1718947674%2FJD%2Fusers%2F66750d058068a0917fed0f0a%2Fproduct%2FProducts_2FWhatsApp_20Image_202024-05-08_20at_2013.36.55_1ba4157e.jpg&w=1080&q=75",
   },
-  {
-    id: 35,
-    Title: "Women Cape Robbin High Heels",
-    Category: "Shoes",
-    Price: "₦25,750.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/01/IMG-20230106-WA0347.jpg",
-  },
+
   {
     id: 36,
-    Title: "Pair of Cartier Glasses",
+    Title: "2TB flash drive",
     Category: "Accessories",
     Price: "₦9,800.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2023/06/a8f81ef3-2c47-415f-aa2f-3b59d88b1561.jpeg",
-  },
-  {
-    id: 37,
-    Title: "Samsung Galaxy Tab A, 8.0 Inch – 2GB RAM",
-    Category: "Phones",
-    Price: "₦169,950.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/1-20-1.jpg",
-  },
-  {
-    id: 38,
-    Title: "A pack of 6 Pink In Sweet Body Philosophy Fragrance",
-    Category: "Fragrance",
-    Price: "₦11,050.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/06/Pink-in-sweet-body-600x600.jpg",
-  },
-  {
-    id: 39,
-    Title: "14Feet Trampoline",
-    Category: "Sport",
-    Price: "₦288,400.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2021/04/TRAMPOLINE.jpg",
-  },
-  {
-    id: 40,
-    Title: "Casual Beach Vintage Top for Men",
-    Category: "Fashion",
-    Price: "₦15,450.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/08/O1CN016xbk0J1uUpQ6yTwb1_3964026041-0-cib.jpg",
-  },
-  {
-    id: 41,
-    Title: "Classic Men Quality Shorts",
-    Category: "Fashion",
-    Price: "₦9,800.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/sht-pink.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690986576%2FJD%2Fusers%2F64c393fc778e62425349e688%2Fproduct%2FProducts_2FIMG_20230802_152344_785.jpg&w=1080&q=75",
   },
   {
     id: 42,
     Title:
-      "Apple Watch Series 5 (GPS) 40mm With White Sport Band – Silver Aluminum",
+      "Apple Watch Series 3 42mm",
     Category: "Accessories",
     Price: "₦257,500.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/1-2.jpg",
-  },
-  {
-    id: 43,
-    Title: "Samsung Galaxy Note 10 Plus (Note 10+) 6.8-Inch",
-    Category: "Phones",
-    Price: "₦381,100.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/1-13.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1699875936%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2F74E97617-D521-41EE-B859-D665FE80E178.jpg&w=1080&q=75",
   },
   {
     id: 44,
-    Title: "Black Female Midi Hand Bag",
+    Title: "Tote Bag",
     Category: "Bag",
     Price: "₦5,700.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/07/Black-bag.jpg",
-  },
-  {
-    id: 45,
-    Title: "8HP Heavy Duty Commercial Treadmill",
-    Category: "Sport",
-    Price: "₦2,317,500.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/04/8HP-Boss-Treadmill-DY8300-1.jpeg",
-  },
-  {
-    id: 46,
-    Title: "Wide Fit monkstrap shoes in black ",
-    Category: "Shoes",
-    Price: "₦31,950.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2019/05/shoe-600x600.jpg",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1693074241%2FJD%2Fusers%2F64e916f31d49b055314bdff5%2Fproduct%2FProducts_2FInShot_20230815_162619889.jpg&w=1080&q=75",
   },
   {
     id: 47,
-    Title: "Silicon iPhone case",
+    Title: "Phone case",
     Category: "Accessories",
     Price: "₦2,100.00",
     Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/06/Silicon-iPhone-case-600x600.jpg",
-  },
-  {
-    id: 48,
-    Title: "Zara Stiletto Cover Heels For Women",
-    Category: "Shoes",
-    Price: "₦18,550.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2020/09/8a7ca162-8092-406f-94b5-966cfa377432.jpg",
-  },
-  {
-    id: 49,
-    Title: "Samsung Galaxy S7 Edge 5.5”",
-    Category: "Phones",
-    Price: "₦77,250.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2020/09/1-16.jpg",
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690994791%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FBFB4DB30-2692-4929-B72F-7BFFA4506555.jpg&w=1080&q=75",
   },
 ];
 

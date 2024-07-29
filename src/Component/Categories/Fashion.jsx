@@ -3,7 +3,12 @@ import Data from "../Data";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
+import { useContext } from 'react'
+import { AppContext } from "../../App";
+
 const Fashion = () => {
+  const {addToCart} = useContext(AppContext)
+
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -24,7 +29,7 @@ const Fashion = () => {
                 <div className="grid pt-5 px-5">
                   <h1 className="font-semibold">{prod.Title}</h1>
                   <p className="text-Pink font-semibold py-5">{prod.Price}</p>
-                  <button className="bg-Pink text-White py-2 mb-5">
+                  <button onClick={() => addToCart(prod.id)} className="bg-Pink text-White py-2 mb-5">
                     Add to Cart
                   </button>
                 </div>

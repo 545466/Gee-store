@@ -19,8 +19,8 @@ const Admin = () => {
   useEffect(() => {
     const getProduct = async () => {
       try{
-        const q = query(productCollectionRef, orderBy("", 'asc'))
-        const data = await getDocs(q);
+        // const q = query(productCollectionRef, orderBy("", 'asc'))
+        const data = await getDocs(productCollectionRef);
         const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
         setProduct(filData)
       } catch (err){
@@ -29,25 +29,40 @@ const Admin = () => {
     };
     getProduct();
   }, []);
+
+  
+
   const onSubmit = async (e) => {
     e.preventDefault()
-    await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice, Category: newCategory })
-  }
+    const storageRef = ref(storage, "name");
+    const uploadTask = uploadBytesResumable(storageRef, image);
+    uploadTask.on(
+      (error) => {
+        console.log(error)
+      }, 
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
+            await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice, Category: newCategory, photoURL:downloadURL })
+        });
+      })
+  };
+
   
   
     return (
       <>
       <Header/>
       <div className='items-center mt-10 flex flex-col'>
-        {/* {
+        {
         product.map((prod) => {
           return(
             <div key={prod.id}>
               <h1>{prod.Title}</h1>
+              <img src={prod.photoURL} alt="" />
             </div>
           )
         })
-      } */}
+      }
             <div className='gap-5  '>
               <div className='grid gap-3'>
                 <label className='font-semibold'>Product Name <span className='text-Pink'>*</span></label>
