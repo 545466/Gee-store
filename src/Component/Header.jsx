@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { AuthContext } from './Context/AuthContext.jsx';
 import { auth } from "../config/firebase"
 import {signOut} from "firebase/auth"
+import menu from '../assets/images/menu.svg'
 const Header = () => {
   const [open, setOpen] = useState(false)
   const { currentUser } = useContext(AuthContext);
@@ -18,6 +19,8 @@ const Header = () => {
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/"}>Home</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/Contact"}>Contact</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/About"}>About</Link>
+              <button onClick={()=>signOut(auth)} className='lg:hidden text-White px-5' >Logout</button>
+
               {
                 currentUser ? "" : <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/SignUp"}>Sign Up</Link>
               }
@@ -30,8 +33,8 @@ const Header = () => {
           </div>
           <FaHeart className='mr-5'/>
           <Link to={"/cart"}><FaCartPlus className='mr-5'/></Link>
-          <FaHamburger className='flex lg:hidden' onClick={()=> setOpen(!open)}/>
-          <button onClick={()=>signOut(auth)} className='bg-Pink rounded-full text-White px-5 pb-3 pt-2' >Logout</button>
+          <img src={menu} className='flex w-[1rem] lg:hidden' onClick={()=> setOpen(!open)}/>
+          <button onClick={()=>signOut(auth)} className='bg-Pink rounded-full lg:flex hidden text-White px-5 pb-3 pt-2' >Logout</button>
         </div>
       </header>
     </>

@@ -1,5 +1,6 @@
-import Phone from "../assets/Phone.png";
-import { FaApple, FaArrowRight } from "react-icons/fa";
+// import Phone from "../assets/Phone.png";
+// import { FaApple, FaArrowRight } from "react-icons/fa";
+import hero from '../assets/images/banner.jpg'
 const Hero = () => {
   // const Category = [
   //   "Woman's Fashion",
@@ -13,9 +14,9 @@ const Hero = () => {
   // ];
   return (
     <>
-      <section className=" flex justify-between lg:mx-40 mx-10 ">
-        
-        <div className="flex bg-Black w-full py-5 mt-10 justify-between items-center  text-White">
+      <section className=" flex justify-between lg:mx-40 pt-10  mx-10 ">
+        <img className='w-full'  src={hero} alt="" />
+        {/* <div className="flex bg-Black w-full py-5 mt-10 justify-between items-center  text-White">
           <div className=" pl-5 lg:pl-20">
             <div className="flex items-center">
               <FaApple className="text-5xl mr-5" />
@@ -31,7 +32,7 @@ const Hero = () => {
             </div>
           </div>
           <img className="w-full lg:w-2/4" src={Phone} />
-        </div>
+        </div> */}
       </section>
     </>
   );
