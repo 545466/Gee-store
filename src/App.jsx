@@ -49,7 +49,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectedRoute> <HomePage /> </ProtectedRoute> ,
+      element: <HomePage /> ,
     },{
       path: "/Admin",
       element: <Admin />,
@@ -93,7 +93,7 @@ function App() {
       element: <ProductDetail />
     },{
       path: "/cart",
-      element: <Cart />
+      element: <ProtectedRoute> <Cart /> </ProtectedRoute> 
     }
   ]);
 
