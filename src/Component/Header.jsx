@@ -6,6 +6,7 @@ import { AuthContext } from './Context/AuthContext.jsx';
 import { auth } from "../config/firebase"
 import {signOut} from "firebase/auth"
 import menu from '../assets/images/menu.svg'
+import logo from '../assets/images/gee store logo.png'
 const Header = () => {
   const [open, setOpen] = useState(false)
   const { currentUser } = useContext(AuthContext);
@@ -13,7 +14,8 @@ const Header = () => {
   return (
     <>
       <header className='flex static justify-between border-Gray border-b-2 px-10  lg:px-40 h-20 items-center'>
-        <h1 className=' text-xl lg:text-3xl font-semibold'>Gee- <span className='text-Pink'>Store</span></h1>
+        {/* <h1 className=' text-xl lg:text-3xl font-semibold'>Gee- <span className='text-Pink'>Store</span></h1> */}
+        <img className='w-[2rem]' src={logo} alt="" />
         <nav className={open ? 'absolute lg:static bg-Pink top-20  py-5 lg:top-0' : "hidden lg:flex"}>
             <ul className='lg:flex grid lg:text-xl text-White lg:text-Black justify-center '>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/"}>Home</Link>
