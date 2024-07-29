@@ -1,8 +1,14 @@
 import { useState } from 'react'
 import { FaSearch, FaHeart, FaCartPlus, FaHamburger } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { AuthContext } from './Context/AuthContext.jsx';
+import { auth } from "../config/firebase"
+import {signOut} from "firebase/auth"
 const Header = () => {
   const [open, setOpen] = useState(false)
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <>
       <header className='flex static justify-between border-Gray border-b-2 px-10  lg:px-40 h-20 items-center'>
@@ -12,7 +18,9 @@ const Header = () => {
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/"}>Home</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/Contact"}>Contact</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/About"}>About</Link>
-              <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/SignUp"}>Sign Up</Link>
+              {
+                currentUser ? "" : <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/SignUp"}>Sign Up</Link>
+              }
             </ul>
         </nav>
         <div className='flex  items-center'>
@@ -23,6 +31,7 @@ const Header = () => {
           <FaHeart className='mr-5'/>
           <Link to={"/cart"}><FaCartPlus className='mr-5'/></Link>
           <FaHamburger className='flex lg:hidden' onClick={()=> setOpen(!open)}/>
+          <button onClick={()=>signOut(auth)} className='bg-Pink rounded-full text-White px-5 pb-3 pt-2' >Logout</button>
         </div>
       </header>
     </>

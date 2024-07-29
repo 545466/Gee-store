@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from 'react'
 import { AppContext } from "../../App";
+import Footer from "../Footer";
 
 const Fragrance = () => {
   const {addToCart} = useContext(AppContext)
@@ -37,6 +38,7 @@ const Fragrance = () => {
               })}
             </div>
           </section>
+          <Footer/>
         </>
   )
 }
