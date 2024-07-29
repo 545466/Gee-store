@@ -19,7 +19,7 @@ const Header = () => {
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/"}>Home</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/Contact"}>Contact</Link>
               <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/About"}>About</Link>
-              <button onClick={()=>signOut(auth)} className='lg:hidden text-White px-5' >Logout</button>
+              <button onClick={()=>signOut(auth)} className='lg:hidden font-semibold text-White px-5' >Logout</button>
 
               {
                 currentUser ? "" : <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/SignUp"}>Sign Up</Link>
