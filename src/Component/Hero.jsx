@@ -1,7 +1,22 @@
-import Phone from "../assets/Phone.png";
-import { FaApple, FaArrowRight } from "react-icons/fa";
-// import hero from '../assets/images/banner.jpg'
+// import Phone from "../assets/Phone.png";
+// import { FaApple, FaArrowRight } from "react-icons/fa";
+import { useState } from 'react'
+import banner from '../assets/images/banner.jpg'
+import hero3 from '../assets/images/slider.jpg'
+import hero from '../assets/images/Slider1.png'
+import hero1 from '../assets/images/slider2.jpg'
+import hero2 from '../assets/images/slider3.png'
+import Carousel from './Carousel'
+import { transform } from 'framer-motion'
+import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
+
 const Hero = () => {
+  const slides = [
+    hero,
+    hero1,
+    hero2,
+    hero3
+  ]
   // const Category = [
   //   "Woman's Fashion",
   //   "Men's Fashion",
@@ -12,11 +27,30 @@ const Hero = () => {
   //   "Health & Beauty",
   //   "Sports & Outdoor",
   // ];
+  const [curr, setCurr] = useState(0)
+  const prev = () => setCurr((curr ) => (curr == 0 ? slides.length -1 : curr -1))
+  const next = () => setCurr((curr ) => (curr == slides.length -1 ? 0 : curr +1))
+
+  
   return (
     <>
-      <section className=" flex justify-between lg:mx-40 pt-10  mx-10 ">
-        {/* <img className='w-full'  src={hero} alt="" /> */}
-        <div className="flex bg-Black w-full py-5 mt-10 justify-between items-center  text-White">
+      <section className=" flex overflow-hidden relative justify-between lg:mx-20 pt-5  mx-5" >
+        <div className='flex transition-transform w-full ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)`}}>
+          {
+            slides.map((s) =>{
+              return(
+                <img  className=' object-fit:contain  w-screen lg:h-[60rem]' key={s} src={s} alt="" />
+              )
+            })
+          }
+         </div>
+        {/* <img className='w-full lg:h-[30rem]'  src={hero} alt="" /> */}
+        <div className='flex absolute items-center justify-between px-5 inset-0'>
+          <CgChevronLeft className='rounded-full p-1 bg-White/80 hover:bg-White' onClick={prev} size={25}/>
+          <CgChevronRight className='rounded-full  p-1 bg-White/80 hover:bg-White' onClick={next} size={25}/>
+        </div>
+        </section>
+        {/* <div className="flex bg-Black w-full py-5 mt-10 justify-between items-center  text-White">
           <div className=" pl-5 lg:pl-20">
             <div className="flex items-center">
               <FaApple className="text-4xl mr-3" />
@@ -34,8 +68,7 @@ const Hero = () => {
            </div>
           </div>
           <img className="w-[10rem] lg:w-2/4" src={Phone} />
-        </div>
-      </section>
+        </div> */}
     </>
   );
 };

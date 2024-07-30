@@ -5,8 +5,8 @@ export default {
     colors: {
       "Gray" : '#f5f5f5',
       "Grey" : '#999999',
-      "Pink" : '#de4e7c',
-      // "Pink" : '#dc4345',
+      // "Pink" : '#de4e7c',
+      "Pink" : '#dc4345',
       "Black" : '#000000',
       "White" : '#fff'
     },
