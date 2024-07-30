@@ -1,13 +1,10 @@
 // import Phone from "../assets/Phone.png";
 // import { FaApple, FaArrowRight } from "react-icons/fa";
 import { useState } from 'react'
-import banner from '../assets/images/banner.jpg'
 import hero3 from '../assets/images/slider.jpg'
 import hero from '../assets/images/Slider1.png'
 import hero1 from '../assets/images/slider2.jpg'
 import hero2 from '../assets/images/slider3.png'
-import Carousel from './Carousel'
-import { transform } from 'framer-motion'
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 
 const Hero = () => {
