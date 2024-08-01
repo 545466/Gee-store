@@ -32,10 +32,11 @@ const Data = [
   },
   {
     id: 5,
-    Title: "Touch Concentrated Perfume Oil 5ml",
-    Category: "Fragrance",
-    Price: "₦850.00",
-    Image: "https://lagmall.com.ng/wp-content/uploads/2023/06/Touch.png",
+    Title: "Phone case",
+    Category: "Accessories",
+    Price: "₦2,100.00",
+    Image:
+      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690994791%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FBFB4DB30-2692-4929-B72F-7BFFA4506555.jpg&w=1080&q=75",
   },
   {
     id: 6,
@@ -115,15 +116,14 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692212621%2FJD%2Fusers%2F64da5478b21a0845ef838a96%2Fproduct%2FProducts_2FScreenshot_20230629-092826.png&w=1080&q=75",
   },
   {
-    id: 17,
-    Title: "2Hp Treadmill with dumbbell and Massager",
-    Category: "Sport",
-    Price: "₦267,800.00",
-    Image:
-      "https://lagmall.com.ng/wp-content/uploads/2021/06/0CA85C78-DDDF-4DF5-BCD1-BEBE28D9DE4C.jpeg",
+    id: 16,
+    Title: "Tote Bag",
+    Category: "Bag",
+    Price: "₦5,700.00",
+    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1693074241%2FJD%2Fusers%2F64e916f31d49b055314bdff5%2Fproduct%2FProducts_2FInShot_20230815_162619889.jpg&w=1080&q=75",
   },
   {
-    id: 19,
+    id: 17,
     Title: "Denim Bag",
     Category: "Bag",
     Price: "₦10,300.00",
@@ -131,14 +131,14 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690759768%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_5994.jpg&w=1080&q=75",
   },
   {
-    id: 20,
+    id: 18,
     Title: "Tom Ford",
     Category: "Fragrance",
     Price: "₦1,550.00",
     Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1696668012%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_9217.jpg&w=1080&q=75",
   },
   {
-    id: 21,
+    id: 19,
     Title: "Clothes",
     Category: "Fashion",
     Price: "₦29,750.00",
@@ -146,21 +146,21 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690976301%2FJD%2Fusers%2F64c6e3be35e1d1a62f4f892f%2Fproduct%2FProducts_2FIMG-20230801-WA0065.jpg&w=1080&q=75",
   },
   {
-    id: 22,
+    id: 20,
     Title: "Unisex Sport boxer",
     Category: "Fashion",
     Price: "₦15,450.00",
     Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1714633697%2FJD%2Fusers%2F6633290f47487ac75e67feb7%2Fproduct%2FProducts_2F1.jpg&w=1080&q=75",
   },
   {
-    id: 24,
+    id: 21,
     Title: "Samsung s9",
     Category: "Phones",
     Price: "₦190,550.00",
     Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1710465029%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FIMG_2968.jpg&w=1080&q=75",
   },
   {
-    id: 28,
+    id: 22,
     Title: "Infinx S5 Lite",
     Category: "Phones",
     Price: "₦499,550.00",
@@ -168,7 +168,7 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1692049841%2FJD%2Fusers%2F64c393fc778e62425349e688%2Fproduct%2FProducts_2FIMG-20230814-WA0370.jpg&w=1080&q=75",
   },
   {
-    id: 29,
+    id: 23,
     Title: "Gucci Bag",
     Category: "Bag",
     Price: "₦12,400.00",
@@ -176,7 +176,7 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690760058%2FJD%2Fusers%2F64c6e1bd35e1d1a62f4f7fc2%2Fproduct%2FProducts_2FIMG_5950.jpg&w=1080&q=75",
   },
   {
-    id: 30,
+    id: 24,
     Title: "Long Sleeve Thrifts",
     Category: "Fashion",
     Price: "₦29,750.00",
@@ -184,14 +184,14 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1701237200%2FJD%2Fusers%2F654e1791655675bfa5194ac4%2Fproduct%2FProducts_2F20231127_220411.jpg&w=1080&q=75",
   },
   {
-    id: 31,
+    id: 25,
     Title: "Google pixel 8",
     Category: "Phones",
     Price: "₦176,150.00",
     Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1699619167%2FJD%2Fusers%2F654e1791655675bfa5194ac4%2Fproduct%2FProducts_2FIMG-20231110-WA0017.jpg&w=1080&q=75",
   },
   {
-    id: 34,
+    id: 26,
     Title: "T-Shirts",
     Category: "Fashion",
     Price: "₦10,300.00",
@@ -200,7 +200,7 @@ const Data = [
   },
 
   {
-    id: 36,
+    id: 27,
     Title: "2TB flash drive",
     Category: "Accessories",
     Price: "₦9,800.00",
@@ -208,27 +208,12 @@ const Data = [
       "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690986576%2FJD%2Fusers%2F64c393fc778e62425349e688%2Fproduct%2FProducts_2FIMG_20230802_152344_785.jpg&w=1080&q=75",
   },
   {
-    id: 42,
+    id: 28,
     Title:
       "Apple Watch Series 3 42mm",
     Category: "Accessories",
     Price: "₦257,500.00",
     Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1699875936%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2F74E97617-D521-41EE-B859-D665FE80E178.jpg&w=1080&q=75",
-  },
-  {
-    id: 44,
-    Title: "Tote Bag",
-    Category: "Bag",
-    Price: "₦5,700.00",
-    Image: "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1693074241%2FJD%2Fusers%2F64e916f31d49b055314bdff5%2Fproduct%2FProducts_2FInShot_20230815_162619889.jpg&w=1080&q=75",
-  },
-  {
-    id: 47,
-    Title: "Phone case",
-    Category: "Accessories",
-    Price: "₦2,100.00",
-    Image:
-      "https://justdeal.ng/_next/image?url=http%3A%2F%2Fres.cloudinary.com%2Fjustdeal%2Fimage%2Fupload%2Fw_400%2Cq_auto%2Cf_auto%2Fv1690994791%2FJD%2Fusers%2F64c3246ad253ace301b6faca%2Fproduct%2FProducts_2FBFB4DB30-2692-4929-B72F-7BFFA4506555.jpg&w=1080&q=75",
   },
 ];
 

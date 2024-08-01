@@ -15,12 +15,15 @@ const Header = () => {
     <>
       <header className='flex static justify-between border-Gray border-b-2 px-10  lg:px-20 h-20 items-center'>
         {/* <h1 className=' text-xl lg:text-3xl font-semibold'>Gee- <span className='text-Pink'>Store</span></h1> */}
-        <img className='w-[3rem]' src={logo} alt="" />
-        <nav className={open ? 'absolute lg:static bg-Pink top-20  py-5 lg:top-0' : "hidden lg:flex"}>
+        <Link to={"/"}>
+          <img className='w-[3rem]' src={logo} alt="" />
+        </Link>
+        <nav className={open ? 'absolute z-10 lg:static bg-Pink top-20  py-5 lg:top-0' : "hidden lg:flex"}>
             <ul className='lg:flex grid lg:text-xl text-White lg:text-Black justify-center '>
-              <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/"}>Home</Link>
-              <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/Contact"}>Contact</Link>
-              <Link className='px-5 font-semibold hover:text-Pink cursor-pointer' to={"/About"}>About</Link>
+              <Link className='px-5 font-semibold  cursor-pointer' to={"/"}>Home</Link>
+              <Link className='px-5 font-semibold  cursor-pointer' to={"/Store"}>Store</Link>
+              <Link className='px-5 font-semibold  cursor-pointer' to={"/Contact"}>Contact</Link>
+              <Link className='px-5 font-semibold  cursor-pointer' to={"/About"}>About</Link>
               
               <Link onClick={()=>signOut(auth)} className={currentUser ? "lg:hidden font-semibold text-White px-5" : "hidden"}>Logout</Link>
               

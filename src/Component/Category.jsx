@@ -48,7 +48,9 @@ const Category = () => {
                 <h1 className='lg:text-2xl lg:py-5 font-semibold'>Best Selling Products</h1>  
             </div>
             <div className='flex justify-between items-center'> 
-                <button className='bg-Pink h-max px-4 lg:px-7 py-3 rounded text-White'>View All</button>
+                <Link to={"/Store"}>
+                    <button className='bg-Pink h-max px-4 lg:px-7 py-3 rounded text-White'>View All</button>
+                </Link>
             </div>
         </div>
       </section>

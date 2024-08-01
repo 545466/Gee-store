@@ -15,11 +15,11 @@ const Admin = () => {
   const [newCategory, setNewCategory] = useState("")
   const [image, setImage] = useState(null)
 
-  const productCollectionRef = collection(db, "Product") 
   useEffect(() => {
     const getProduct = async () => {
       try{
         // const q = query(productCollectionRef, orderBy("", 'asc'))
+        const productCollectionRef = collection(db, "Product") 
         const data = await getDocs(productCollectionRef);
         const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
         setProduct(filData)

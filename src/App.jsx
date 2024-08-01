@@ -18,6 +18,7 @@ import Cart from "./Component/Cart.jsx";
 import Contact from "./Component/Contact.jsx";
 import Admin from "./Component/Admin.jsx";
 import { AuthContext } from "./Component/Context/AuthContext.jsx";
+import Store from "./Component/Store.jsx";
 
 export const AppContext = createContext(null);
 
@@ -91,6 +92,9 @@ function App() {
     },{
       path: "/ProductDetail/:name",
       element: <ProductDetail />
+    },{
+      path: "/Store",
+      element: <Store />
     },{
       path: "/cart",
       element: <ProtectedRoute> <Cart /> </ProtectedRoute> 
