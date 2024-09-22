@@ -16,9 +16,20 @@ import { createContext, useContext, useState } from "react"
 import Data from './Component/Data.js'
 import Cart from "./Component/Cart.jsx";
 import Contact from "./Component/Contact.jsx";
-import Admin from "./Component/Admin.jsx";
+import Admin from "./Component/Admin/Admin.jsx";
+import Sidebar from "./Component/Admin/Sidebar.jsx";
 import { AuthContext } from "./Component/Context/AuthContext.jsx";
 import Store from "./Component/Store.jsx";
+import Dashboard from "./Component/Admin/Dashboard.jsx";
+import AddProduct from "./Component/Admin/AddProduct.jsx";
+import Product from "./Component/Admin/Product.jsx";
+import User from "./Component/Admin/user";
+import Details from "./Component/Settings/Details.jsx";
+import Password from "./Component/Settings/Password.jsx";
+import Settings from "./Component/Settings/Settings.jsx";
+
+import Account from "./Component/Settings/Account.jsx";
+import Delivery from "./Component/Settings/Delivery.jsx";
 
 export const AppContext = createContext(null);
 
@@ -40,6 +51,7 @@ function App() {
     }
   // const contextValue = 
   const { currentUser } = useContext(AuthContext);
+  // eslint-disable-next-line react/prop-types
   const ProtectedRoute = ({ children }) =>{
     if(!currentUser){
       return <Navigate to="/Login"/>
@@ -71,6 +83,26 @@ function App() {
       path: "/Fashion",
       element: <Fashion />,
     },
+     {
+      path: "/Settings",
+      element: <Settings/>
+     },
+     {
+      path: "/Settings/Delivery",
+      element: <Delivery/>
+     },
+    {
+      path: "/Settings/Details",
+      element: <Details />,
+    },
+    {
+      path: "/Settings/account",
+      element: <Account />,
+    },
+    {
+      path: "/Settings/password",
+      element: <Password />,
+    },
     {
       path: "/Bag",
       element: <Bag />,
@@ -95,6 +127,21 @@ function App() {
     },{
       path: "/Store",
       element: <Store />
+    },{
+      path: "/Sidebar",
+      element: <Sidebar />
+    },{
+      path: "/Dashboard",
+      element: <Dashboard/>
+    },{
+      path: "/AddProduct",
+      element: <AddProduct />
+    },{
+      path: "/Product/",
+      element: <Product/>
+    },{
+      path: "/user",
+      element: <User/>
     },{
       path: "/cart",
       element: <ProtectedRoute> <Cart /> </ProtectedRoute> 

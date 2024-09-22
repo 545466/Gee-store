@@ -1,43 +1,82 @@
 import { auth, storage, db } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
-import { updateProfile } from 'firebase/auth'
 import photo from "../assets/images/photo.png"
-import { addDoc, doc, collection } from "firebase/firestore";
+import hide from "../assets/images/hide.png"
+import show from "../assets/images/show.png"
+import google from '../assets/svg/google.svg'
+
+
+import { addDoc, collection } from "firebase/firestore";
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [file, setFile] = useState( )
-  const Usercol = collection(db, "Users") 
-  const SignUp = async (e) => {
-    e.preventDefault()
-    const res = await createUserWithEmailAndPassword(auth, email, password);
-    const storageRef = ref(storage, name);
+  const [file, setFile] = useState("")
+  const [showPassword, setShowPassword] = useState(false);
 
-    const uploadTask = uploadBytesResumable(storageRef, file);
-    uploadTask.on(
-      (error) => {
-        console.log(error)
-      }, 
-      () => {
-        getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
-          await updateProfile(res.user, {
-            name,
-            photoURL:downloadURL
+  const navigate = useNavigate()
+  const pop = async() =>{
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider)
+    navigate("/login")
+ }
+  // const SignUp = async (e) => {
+  //   e.preventDefault()
+    
+    const SignUp = async(e) =>{
+      e.preventDefault()
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      const metadata = {
+          contentType: 'image/jpeg'
+        };
+        
+      const storageRef = ref(storage, `images/${file.name}`);
+      const uploadTask = uploadBytesResumable(storageRef, file, metadata);
+  
+      uploadTask.on(
+          (error) => {
+              console.log(error)
+          }, 
+          () => {
+          const productCollectionRef = collection(db, "Users") 
+          getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
+              await addDoc(productCollectionRef, { uid: res.user.uid,
+                name: name,
+                email: email,
+                photoURL: downloadURL })
+              navigate("/login")
           });
-          await addDoc(Usercol, {
-            uid: res.user.uid,
-            name,
-            email,
-            photoURL: downloadURL,
-          });
-        });
       })
-  };
+    }
+    
+    
+    
+  //   const metadata = {
+  //     contentType: 'image/jpeg'
+  //   };
+  //   const storageRef = ref(storage, `userImg/${file.name}`);
+  //   const uploadTask = uploadBytesResumable(storageRef, file, metadata);
+  //   uploadTask.on(
+  //     (error) => {
+  //       console.log(error)
+  //     }, 
+  //     () => {
+  //       const userCollectionRef = collection(db, "Users") 
+  //       getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
+  //         await addDoc(userCollectionRef, {
+  //           uid: res.user.uid,
+  //           name: name,
+  //           email: email,
+  //           photoURL: downloadURL,
+  //         });
+  //         navigate("/login")
+  //       });
+  //     })
+  // };
 
   return (
     <>
@@ -50,31 +89,38 @@ const SignUp = () => {
           <h1 className="pb-3 text-xl lg:text-4xl font-semibold">
             Create an account
           </h1>
+          <div className='w-full flex justify-center gap-3 py-2 border-[.1rem] rounded my-5'>
+              <img src={google} alt="" />
+              <button onClick={pop} className=''>Signup with Google</button>
+            </div>
           <p>Enter your details below</p>
-          <div className="pt-10 pb-5 w-[300px] grid">
+          <div className="pt-5 pb-5 w-[300px] grid">
             <input
-              className="border-b-2 mb-5 pb-2 outline-none border-Grey"
+              className="border-[.1rem] rounded px-2 mb-5 pb-2 outline-none py-2 flex items-center border-Grey"
               onChange={(e) => setName(e.target.value)}
               type="text"
               name=""
               placeholder="Full-Name"
             />
             <input
-              className="border-b-2 mb-5 pb-2 outline-none border-Grey"
+              className="border-[.1rem] rounded px-2 mb-5 pb-2 outline-none py-2 flex items-center border-Grey"
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               name=""
               placeholder="Email"
             />
-            <input
-              className="border-b-2 pb-2 outline-none border-Grey"
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              placeholder="Password"
-            />
+            <div className="border-[.1rem] rounded px-2 mb-5 pb-2 outline-none py-2 justify-between flex items-center border-Grey">
+              <input
+                className=" outline-none flex items-center"
+                onChange={(e) => setPassword(e.target.value)}
+                type={showPassword  ? "text" : "password"}
+                placeholder="Password"
+              />
+             <img className='w-[1.3rem] h-[1.3rem]' src={showPassword ? hide : show} onClick={() => setShowPassword((prev) => !prev)}></img>
+            </div>
           </div>
-          <input className="hidden" type="file" name="" id="file" />
-          <label onChange={(e) => setFile(e.target.value)} className="flex cursor-pointer mb-5 font-semibold gap-3 items-center" htmlFor="file">
+          <input onChange={(e) => {setFile(e.target.files[0])}} className="hidden" type="file" name="" id="file" />
+          <label className="flex cursor-pointer mb-5 font-semibold gap-3 items-center" htmlFor="file">
             <img className="w-10" src={photo} alt="" />
             <p >Add your Avater</p>
           </label>

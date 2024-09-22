@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import Data from '../Component/Data'
 import { useContext } from 'react'
 import { AppContext } from '../App'
+import { AuthContext } from './Context/AuthContext'
 import Footer from './Footer'
 // import Admin from './Admin'
 
@@ -29,6 +30,8 @@ const HomePage = () => {
 //   const onSubmit = async () => {
 //     await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice })
 // }
+  const {currentUser} = useContext(AuthContext)
+  console.log(currentUser)
   
   const {addToCart} = useContext(AppContext)
   return (
@@ -42,7 +45,7 @@ const HomePage = () => {
           return(
             <div className='bg-Gray shadow mt-10 ' key={Products.id} >
               <Link to={`/ProductDetail/${Products.Title.toLowerCase()}`}>
-                  <img className="w-full lg:h-60 h-40 object-cover" src={Products.Image} alt="" />
+                  <img className="w-full lg:h-[18rem] h-40 object-cover" src={Products.Image} alt="" />
                 </Link>
               <div className='grid pt-5 '>
               <h1 className='font-semibold pl-2 lg:text-[1rem] text-[.8rem]'>{Products.Title}</h1>

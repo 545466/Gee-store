@@ -32,11 +32,11 @@ const Hero = () => {
   return (
     <>
       <section className=" flex overflow-hidden relative justify-between lg:mx-20 pt-5  mx-5" >
-        <div className='flex transition-transform w-full ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)`}}>
+        <div className='flex transition-transform lg:w-[130rem] w-full ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)`}}>
           {
             slides.map((s) =>{
               return(
-                <img  className=' object-fit:contain  w-screen lg:h-[60rem]' key={s} src={s} alt="" />
+                <img  className=' object-fit:contain object-contain  w-screen  lg:h-[40rem]' key={s} src={s} alt="" />
               )
             })
           }
