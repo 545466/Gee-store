@@ -4,7 +4,7 @@ import { db } from '../../config/firebase'
 import { getDocs,collection, deleteDoc, doc, } from 'firebase/firestore'
 import search from "../../assets/svg/search.svg"
 import { Link } from "react-router-dom"
-const User = () => {
+const UserDetails = () => {
     const [user, setUser] = useState([])
     const [searchs, setSearchs] = useState("")
     
@@ -77,4 +77,4 @@ const User = () => {
   )
 }
 
-export default User
+export default UserDetails

@@ -23,7 +23,7 @@ import Store from "./Component/Store.jsx";
 import Dashboard from "./Component/Admin/Dashboard.jsx";
 import AddProduct from "./Component/Admin/AddProduct.jsx";
 import Product from "./Component/Admin/Product.jsx";
-import User from "./Component/Admin/user";
+import User from "./Component/Admin/UserDetails.jsx";
 import Details from "./Component/Settings/Details.jsx";
 import Password from "./Component/Settings/Password.jsx";
 import Settings from "./Component/Settings/Settings.jsx";
