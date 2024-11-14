@@ -11,25 +11,25 @@ import Footer from './Footer'
 
 
 const HomePage = () => {
-//   const [product, setProduct] = useState([])
-//   const [newTitle, setNewTitle] = useState("")
-//   const [newPrice, setNewPrice] = useState("")
-//   const productCollectionRef = collection(db, "Product")
-//   useEffect(() => {
-//     const getProduct = async () => {
-//       try{
-//         const data = await getDocs(productCollectionRef);
-//         const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-//         setProduct(filData)
-//       } catch (err){
-//         console.error(err)
-//       }
-//     };
-//     getProduct();
-//   }, []);
-//   const onSubmit = async () => {
-//     await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice })
-// }
+   const [product, setProduct] = useState([])
+   const [newTitle, setNewTitle] = useState("")
+   const [newPrice, setNewPrice] = useState("")
+   const productCollectionRef = collection(db, "Product")
+   useEffect(() => {
+     const getProduct = async () => {
+       try{
+         const data = await getDocs(productCollectionRef);
+         const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
+         setProduct(filData)
+       } catch (err){
+         console.error(err)
+       }
+     };
+     getProduct();
+   }, []);
+   const onSubmit = async () => {
+     await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice })
+ }
   const {currentUser} = useContext(AuthContext)
   console.log(currentUser)
   
@@ -41,7 +41,7 @@ const HomePage = () => {
       <Category/>
       <div className='grid grid-cols-2 lg:grid-cols-4  gap-5 px-5 lg:px-20'>
       {
-        Data.slice(0, 4).map((Products)=>{
+        product.slice(0, 4).map((Products)=>{
           return(
             <div className='bg-Gray shadow mt-10 ' key={Products.id} >
               <Link to={`/ProductDetail/${Products.Title.toLowerCase()}`}>
