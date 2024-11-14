@@ -4,7 +4,9 @@ import Category from './Category'
 import {Link} from 'react-router-dom'
 import Data from '../Component/Data'
 import { useContext, useState } from 'react'
+import { getDocs, query, addDoc, where, collection } from "firebase/firestore";
 import { AppContext } from '../App'
+import { db } from "../config/Firebase";
 import { AuthContext } from './Context/AuthContext'
 import Footer from './Footer'
 // import Admin from './Admin'
