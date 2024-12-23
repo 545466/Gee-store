@@ -47,9 +47,15 @@ const Delivery = () => {
             // const currentUserUid = user.uid;
             // const q = query(collection(db, "Users" ), where("uid", "==", currentUserUid));
             // const docRef = doc(db, "Users", currentUserUid)
+            const updates = {};
+            if(address && address.trim() !== ""){
+              updates.deliveryAddress = address;
+            }else{
+              console.log("Email is empty")
+            }
             const dbref = collection(db, "Users")
             const updateRef = doc(dbref, currentUser.id)
-            await updateDoc(updateRef, {deliveryAddress: address, name: name, location: location, uid: currentUser.uid})
+            await updateDoc(updateRef, updates)
     }
   return (
     <>

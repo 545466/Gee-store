@@ -14,7 +14,7 @@ const Store = () => {
           {Data.map((prod) => {
             return (
               <div className="bg-Gray shadow " key={prod}>
-                <img className="w-full lg:h-60 h-40 object-cover" src={prod.Image} alt="" />
+                <img className="w-full lg:h-60 h-40 object-cover" src={prod.photoURL} alt="" />
                 <div className="grid lg:pt-5 pt-2 ">
                   <h1 className="font-semibold pl-2 lg:text-[1rem] text-[.8rem]">{prod.Title}</h1>
                   <p className="text-Pink font-semibold pl-2 lg:text-[1rem] text-[.8rem] lg:py-5 py-2">{prod.Price}</p>

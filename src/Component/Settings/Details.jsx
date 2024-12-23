@@ -1,10 +1,8 @@
 import { getDocs, doc, updateDoc, query, where, collection, } from "firebase/firestore"
 import { db} from "../../config/firebase"
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../Context/AuthContext";
+import { useEffect, useState } from "react";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 import { Link } from "react-router-dom";
-import img  from "../../assets/images/edit.png"
 import Header from "../Header";
 import Footer from "../Footer";
 const Details = () => {
@@ -12,13 +10,13 @@ const [users, setUsers] = useState("")
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [location, setLocation] = useState("");
-const {currentUser} = useContext(AuthContext)
 
 
 useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const currentUserUid = user.uid;
+        console.log(user)
     
         // Filter based on UID (or email, if preferred)
         const q = query(collection(db, "Users"), where("uid", "==", currentUserUid));
@@ -47,9 +45,30 @@ const updateProfile = async (e) => {
     // const currentUserUid = user.uid;
     // const q = query(collection(db, "Users" ), where("uid", "==", currentUserUid));
     // const docRef = doc(db, "Users", currentUserUid)
+    const updates ={}
+    if(name && name.trim() !== ""){
+      updates.name = name;
+    }else{
+      console.log("Name is empty")
+    }
+    if(email && email.trim() !== ""){
+      updates.email = email;
+    }else{
+      console.log("email is empty")
+    }
+    if(location && location.trim() !== ""){
+      updates.location = location;
+    }else{
+      console.log("Location is empty")
+    }
+    // if(downloadURL && downloadURL.trim() !== ""){
+    //   updates.UserPics = downloadURL;
+    // }else{
+    //   console.log("Location is empty")
+    // }
     const dbref = collection(db, "Users")
     const updateRef = doc(dbref, users.id)
-    const result = await updateDoc(updateRef, {email: email, name: name, location: location, uid: currentUser.uid})
+    const result = await updateDoc(updateRef, updates)
    console.log(result)
 }
 

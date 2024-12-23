@@ -27,6 +27,7 @@ import User from "./Component/Admin/UserDetails.jsx";
 import Details from "./Component/Settings/Details.jsx";
 import Password from "./Component/Settings/Password.jsx";
 import Settings from "./Component/Settings/Settings.jsx";
+import ForgetPassword from "./Component/ForgetPassword.jsx"
 
 import Account from "./Component/Settings/Account.jsx";
 import Delivery from "./Component/Settings/Delivery.jsx";
@@ -56,7 +57,6 @@ function App() {
     if(!currentUser){
       return <Navigate to="/Login"/>
     }
-    
     return children
   };
   const router = createBrowserRouter([
@@ -106,6 +106,10 @@ function App() {
     {
       path: "/Bag",
       element: <Bag />,
+    },
+    {
+      path: "/ForgetPassword",
+      element: <ForgetPassword />,
     },{
       path: "/Shoe",
       element: <Shoe />,
