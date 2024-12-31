@@ -10,7 +10,7 @@ const Store = () => {
     <>
         <Header/>
         <section className='px-5 py-10'>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:px-20">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:px-40">
           {Data.map((prod) => {
             return (
               <div className="bg-Gray shadow " key={prod}>

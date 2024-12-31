@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='hidden  lg:flex static justify-between border-Gray border-b-2 px-10  lg:px-20 h-20 items-center'>
+      <header className='hidden  lg:flex static justify-between border-Gray border-b-2 px-10  lg:px-40 h-20 items-center'>
         {/* <h1 className=' text-xl lg:text-3xl font-semibold'>Gee- <span className='text-Pink'>Store</span></h1> */}
         <Link to={"/"}>
           <img className='w-[3rem]' src={logo} alt="" />
@@ -24,8 +24,7 @@ const Header = () => {
               <Link className='px-5 font-semibold  lg:flex hidden cursor-pointer' to={"/"}>Home</Link>
               <Link className='px-5 font-semibold  lg:flex hidden cursor-pointer' to={"/Store"}>Store</Link>
               <Link className='px-5 font-semibold  lg:flex hidden cursor-pointer' to={"/Contact"}>Contact</Link>
-              <Link className='px-5 font-semibold  lg:flex hidden cursor-pointer' to={"/About"}>About</Link>
-              
+              {/* <Link className='px-5 font-semibold  lg:flex hidden cursor-pointer' to={"/About"}>About</Link> */}
             </ul>
         </nav>
         <nav>
@@ -60,7 +59,7 @@ const Header = () => {
             <input className='mr-3 bg-Gray outline-none text-Black' type="search" placeholder='what are you looking for?' />
             <FaSearch />
           </div>
-          <FaHeart className='mr-5 w-[4rem]'/>
+          {/* <FaHeart className='mr-5 w-[4rem]'/> */}
           <Link to={"/cart"}><FaCartPlus className='mr-5 lg:w-[2rem]'/></Link>
           <img src={menu} className='flex w-[1rem] lg:hidden' onClick={()=> setOpen(!open)}/>
           <Link onClick={()=>signOut(auth)} className={currentUser ? "bg-Pink rounded-full pb-3 pt-2 hidden lg:flex font-semibold text-White px-5" : "hidden"}>Logout</Link>

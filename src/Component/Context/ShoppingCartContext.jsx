@@ -12,6 +12,7 @@ export const useShoppingCart = () => {
   return useContext(ShoppingCartContext);
 };
 
+// eslint-disable-next-line react/prop-types
 export const ShoppingCartProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext)
   const [cartItems, setCartItems] = useState([]);
@@ -88,7 +89,7 @@ export const ShoppingCartProvider = ({ children }) => {
     Product=cart;
     Product.qty=Product.qty-1;
     Product.TotalProductPrice=Product.qty*Product.Price;
-    if(Product.qty > 1){
+    if(Product.qty >= 1){
       const ref = collection(db, "Cart");
       const updateref = doc(ref, Product.id)
       await updateDoc(updateref, Product);

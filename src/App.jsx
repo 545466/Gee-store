@@ -126,7 +126,7 @@ function App() {
       path: "/Phone",
       element: <Phone />
     },{
-      path: "/ProductDetail/:name",
+      path: "/ProductDetail/:productId",
       element: <ProductDetail />
     },{
       path: "/Store",

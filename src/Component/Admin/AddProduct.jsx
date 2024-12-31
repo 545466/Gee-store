@@ -57,7 +57,7 @@ const AddProduct = () => {
   const [newPrice, setNewPrice] = useState("")
   const [newCategory, setNewCategory] = useState("")
   const [newDescription, setNewDescription] = useState("")
-  const [product, setProduct] = useState([])
+  // const [product, setProduct] = useState([])
   // const router = useRouter()
   // const getProduct = async () => {
   //   try{

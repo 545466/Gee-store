@@ -2,8 +2,7 @@ import Header from './Header'
 import Hero from './Hero'
 import Category from './Category'
 import {Link} from 'react-router-dom'
-import { useContext} from 'react'
-import { AppContext } from '../App'
+import { useContext, useEffect} from 'react'
 import Footer from './Footer'
 import { DataContext } from './Context/DataContext'
 import { useShoppingCart } from './Context/ShoppingCartContext'
@@ -13,6 +12,9 @@ const HomePage = () => {
   const { product } = useContext(DataContext)
   // const {addToCart} = useContext(AppContext)
   const { add } = useShoppingCart();
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <>
       <Header/>
@@ -23,7 +25,7 @@ const HomePage = () => {
         product.slice(0, 4).map((Products)=>{
           return(
             <div className='bg-Gray shadow mt-10 ' key={Products.id} >
-              <Link to={`/ProductDetail/${Products.Title.toLowerCase()}`}>
+              <Link to={`/ProductDetail/${Products.id.toLowerCase()}`}>
                   <img className="w-full lg:h-[18rem] h-40 object-cover" src={Products.photoURL} alt="" />
                 </Link>
               <div className='grid pt-5 '>
