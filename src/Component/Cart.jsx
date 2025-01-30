@@ -2,7 +2,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import { useShoppingCart } from './Context/ShoppingCartContext'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from './Context/AuthContext';
 import { PaystackButton } from 'react-paystack'
 
@@ -27,6 +27,10 @@ const Cart = () => {
     },
     onClose: () => alert("Transaction Unsuccessful")
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   return (
     <>

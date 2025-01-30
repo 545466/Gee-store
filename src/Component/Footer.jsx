@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 
 const Footer = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
   return (
     <>
         <footer className="flex  mt-20 gap-5 text-White lg:flex-row flex-col bg-Black py-10 px-5 lg:p-40 justify-between">
