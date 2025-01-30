@@ -64,7 +64,6 @@ const ProductDetail = () => {
       setProductRatings(ratingsData);
     };
     fetchRatings();
-    // console.log(ProductDetails)
 
   return (
     <>
@@ -134,7 +133,7 @@ const ProductDetail = () => {
               {rateProduct && (
                 <form
                   onSubmit={(e) => uploadRating(e)}
-                  className="flex flex-col gap-2"
+                  className="flex pt-2 flex-col gap-2"
                 >
                   <select
                     name="rating"
@@ -165,7 +164,7 @@ const ProductDetail = () => {
                   ></textarea>
                   <button
                     type="submit"
-                    className="rounded-md bg-primary py-3 font-semibold text-white"
+                    className="rounded-md bg-Pink py-3 font-semibold text-White"
                   >
                     Post
                   </button>

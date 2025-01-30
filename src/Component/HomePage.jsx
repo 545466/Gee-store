@@ -26,10 +26,10 @@ const HomePage = () => {
           return(
             <div className='bg-Gray shadow mt-10 ' key={Products.id} >
               <Link to={`/ProductDetail/${Products.id.toLowerCase()}`}>
-                  <img className="w-full lg:h-[18rem] h-40 object-cover" src={Products.photoURL} alt="" />
+                  <img className="w-full lg:h-[18rem] h-40 object-cover" src={Products.photoURL} alt="product imag" />
                 </Link>
               <div className='grid pt-5 '>
-              <h1 className='font-semibold pl-2 lg:text-[1rem] text-[.8rem]'>{Products.Title}</h1>
+              <h1 className='font-semibold px-2 lg:text-[1rem] text-[.8rem]'>{Products.Title}</h1>
               <p className='text-Pink font-semibold pl-2 lg:text-[1rem] text-[.8rem] lg:py-5 py-2'>₦{Intl.NumberFormat().format(Products.Price)}</p>
               <button onClick={() => add(Products)} className='bg-Pink lg:text-[1rem] text-[.8rem] text-White py-2'>Add to Cart</button>
               </div>
