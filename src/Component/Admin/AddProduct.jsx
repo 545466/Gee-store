@@ -1,77 +1,17 @@
 import Admin from "./Admin"
 import { useState } from "react"
-// import { updateProfile } from 'firebase/auth'
-import photo from "../../assets/images/photo.png"
 import { db, storage } from '../../config/firebase'
 import { ref, getDownloadURL, uploadBytes} from 'firebase/storage'
 
-import { addDoc, getDocs, collection } from 'firebase/firestore'
+import { addDoc, collection } from 'firebase/firestore'
 
 
 const AddProduct = () => {
-  // const [file, setFile] = useState("")
-  // const [newTitle, setNewTitle] = useState("")
-  // const [newPrice, setNewPrice] = useState("")
-  // const [newCategory, setNewCategory] = useState("")
-  // const [product, setProduct] = useState([])
-  // const navigate = useNavigate()
-
-  // const getProduct = async () => {
-  //   try{
-  //     // const q = query(productCollectionRef, orderBy("", 'asc'))
-  //     const productCollectionRef = collection(db, "Product") 
-  //     const data = await getDocs(productCollectionRef);
-  //     const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-  //     setProduct(filData)
-  //     console.log(filData)
-  //   } catch (err){
-  //     console.error(err)
-  //   }
-  // };
-  // getProduct();
-
-  // const uploadFile = (e) =>{
-  //   e.preventDefault()
-  //   const metadata = {
-  //       contentType: 'image/jpeg'
-  //     };
-      
-  //   const storageRef = ref(storage, `images/${file.name}`);
-  //   const uploadTask = uploadBytesResumable(storageRef, file, metadata);
-
-  //   uploadTask.on(
-  //       (error) => {
-  //           console.log(error)
-  //       }, 
-  //       () => {
-  //       const productCollectionRef = collection(db, "Product") 
-  //       getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
-  //           await addDoc(productCollectionRef, { Title: newTitle, Price: newPrice, Category: newCategory, photoURL:downloadURL })
-  //           navigate("/Product")
-  //       });
-  //   })
-  // }
-
   const [file, setFile] = useState([])
   const [newTitle, setNewTitle] = useState("")
   const [newPrice, setNewPrice] = useState("")
   const [newCategory, setNewCategory] = useState("")
   const [newDescription, setNewDescription] = useState("")
-  // const [product, setProduct] = useState([])
-  // const router = useRouter()
-  // const getProduct = async () => {
-  //   try{
-  //     // const q = query(productCollectionRef, orderBy("", 'asc'))
-  //     const productCollectionRef = collection(db, "Product") 
-  //     const data = await getDocs(productCollectionRef);
-  //     const filData = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
-  //     setProduct(filData)
-  //   } catch (err){
-  //     console.error(err)
-  //   }
-  // };
-  // getProduct();
-
 
     const uploadFile = async(e) =>{
       e.preventDefault()
@@ -89,17 +29,12 @@ const AddProduct = () => {
       }
         const productCollectionRef = collection(db, "Product") 
           await addDoc(productCollectionRef, { Title: newTitle, Price: Number(newPrice), Category: newCategory, photoURL: imageURLList, Description: newDescription, Date: new Date() })
-
           setNewTitle("");
           setNewCategory("");
           setNewDescription("");
           setNewPrice("");
           setFile([]);
     }
-  
-  
-
-
 
   return (
     <>

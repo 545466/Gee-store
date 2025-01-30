@@ -16,6 +16,7 @@ const ProductDetail = () => {
     const [rateProduct, setRateProduct] = useState(false);
     const [productRatings, setProductRatings] = useState([]);
 
+
     useEffect(() => {
       window.scrollTo(0, 0); 
     }, []);
@@ -50,7 +51,7 @@ const ProductDetail = () => {
     const params = useParams();
     const productId = params.productId;
     const ProductDetails = product.find(
-      (Product) => Product.Title.toLowerCase() === productId
+      (Product) => Product.id.toLowerCase() === productId
     )
 
     const fetchRatings = async () => {
@@ -63,6 +64,7 @@ const ProductDetail = () => {
       setProductRatings(ratingsData);
     };
     fetchRatings();
+    // console.log(ProductDetails)
 
   return (
     <>

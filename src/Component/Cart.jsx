@@ -11,7 +11,7 @@ const Cart = () => {
   const { inc, dec, del, cartItems, totalVal } = useShoppingCart();
   const { currentUser } = useContext(AuthContext)
 
-  const publicKey = "pk_test_0419a478308877ea0bfae17af59db61ab59ea9fb";
+  const publicKey = "pk_live_9c4b3db8b8acee975dcf4332c8c49b8325cf8640";
   const name = "Paul";
   const email = currentUser.email;
   const amount = totalVal * 100;
@@ -44,7 +44,7 @@ const Cart = () => {
                       <p className=''>₦{Intl.NumberFormat().format(product.Price)}</p>
                     </div>
                   </div>
-                  <div className='flex items-center justify-between pt-5'>
+                  <div className='flex gap-10 pt-5'>
                     <button  onClick={() => del(product)} className='bg-Pink px-5 py-2 text-sm font-semibold text-White rounded'>Remove</button>
                     <div className=' flex'>
                       <button className='bg-Grey px-2 rounded text-White font-bold' onClick={()=> dec(product)}>-</button>

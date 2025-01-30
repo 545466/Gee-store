@@ -2,7 +2,6 @@
 import { FaUser } from "react-icons/fa"
 import { FaGear } from "react-icons/fa6"
 import { FaSignOutAlt } from "react-icons/fa"
-// import user from '../../assets/images/user.png'
 import logo from '../../assets/images/gee store logo.png'
 import { Link } from "react-router-dom"
 
