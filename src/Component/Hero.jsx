@@ -31,12 +31,12 @@ const Hero = () => {
   
   return (
     <>
-      <section className=" flex overflow-hidden relative justify-between lg:mx-20 pt-5  mx-5" >
-        <div className='flex transition-transform lg:w-screen w-full ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)`}}>
+      <section className=" flex overflow-hidden lg:w-[65rem] relative justify-between lg:mx-40 pt-5  mx-5" >
+        <div className='flex transition-transform  w-full ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)`}}>
           {
             slides.map((s) =>{
               return(
-                <img  className=' object-cover  w-screen lg:w-[120rem] lg:h-[40rem]' key={s} src={s} alt="" />
+                <img  className=' object-contain  w-screen lg:w-[66rem] lg:h-[35rem]' key={s} src={s} alt="" />
               )
             })
           }

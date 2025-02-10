@@ -7,6 +7,8 @@ import ImageSwiper from '../ImageSwiper';
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { AuthContext } from '../Context/AuthContext';
+import { motion } from 'framer-motion'
+
 
 const ProductDetail = () => {
     const { product } = useContext(DataContext)
@@ -73,9 +75,9 @@ const ProductDetail = () => {
             ProductDetails ? (
                 <div className='lg:flex justify-center '>
                     <Link to={"/"} className="bg-Black py-1 w-max text-White px-3 rounded">Back</Link>
-                    <div className='pt-10'>
+                    <motion.div initial={{opacity:0, x:80}} animate={{opacity: 1, x:0}} transition={{delay:3}}  className='pt-10'>
                       <ImageSwiper  images={ProductDetails.photoURL}/>
-                    </div>
+                    </motion.div>
                     <div className='lg:pl-20 lg:pt-0 pt-5'>
                       <h1 className='lg:text-3xl text-xl font-semibold'>{ProductDetails.Title}</h1>
                       <p className='lg:text-3xl text-Pink py-2 font-semibold'> ₦{Intl.NumberFormat().format(ProductDetails.Price)}</p>
